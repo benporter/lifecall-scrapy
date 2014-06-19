@@ -14,12 +14,12 @@ What I found helpful:
 
 Install the scrapy module
 
-    #!/bin/bash
+    #!/usr/bin/env bash
     sudo pip install scrapy
     
 Create the project, which builds out most of the necessary files.
 
-    #!/bin/bash
+    #!/usr/bin/env bash
     scrapy startproject lifecall
     
 Edit lifecall/lifecall/items.py to add the fields you want to scrape.  In my case, it was three things: the source url, the state name and the fulltext, which is all of the addresses and phone numbers.
@@ -62,7 +62,7 @@ A few noteworthy comments from lifecall_spider.py:
 
 To run the spider, which pulls the the ~50 pages in approx 2-3 seconds, run the following from the command line:
 
-    #!/bin/bash
+    #!/usr/bin/env bash
     scrapy crawl lifecall -o scraped_data.json -t json
 
 That outputs a .json file, and other options are available, such as csv and xml.
@@ -100,6 +100,8 @@ Initially I intended to use the <a href="https://github.com/scrapy/scrapely">scr
 ===============
 
 **Install and Setup**
+
+Everything below is #!/usr/bin/env bash
 
 Edit <b>/etc/apt/sources.list</b> to include the following line.  I am running Ubuntu 13, so put "saucy" but your machine could be different.
 
