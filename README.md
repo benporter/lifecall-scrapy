@@ -10,12 +10,16 @@ What I found helpful:
  - Scrapy <a href="http://doc.scrapy.org/en/latest/intro/tutorial.html">tutorial<a/>
  - newcoder.io web scraping <a href="http://newcoder.io/scrape/">tutorial<a/>
 
-Install the scrapy module (bash)
+===============
 
+Install the scrapy module
+
+    #!/bin/bash
     sudo pip install scrapy
     
 Create the project, which builds out most of the necessary files.
 
+    #!/bin/bash
     scrapy startproject lifecall
     
 Edit lifecall/lifecall/items.py to add the fields you want to scrape.  In my case, it was three things: the source url, the state name and the fulltext, which is all of the addresses and phone numbers.
@@ -58,6 +62,7 @@ A few noteworthy comments from lifecall_spider.py:
 
 To run the spider, which pulls the the ~50 pages in approx 2-3 seconds, run the following from the command line:
 
+    #!/bin/bash
     scrapy crawl lifecall -o scraped_data.json -t json
 
 That outputs a .json file, and other options are available, such as csv and xml.
