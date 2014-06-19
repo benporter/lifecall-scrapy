@@ -1,7 +1,11 @@
 lifecall-scrapy
 ===============
 
-Using the python scrapy module to pull info off of lifecall.org Python script to scrape addresses from lifecall.org using the <a href="https://github.com/scrapy/scrapely">scrapely</a> python module
+Using the python scrapy module to pull info off of lifecall.org.  
+
+Problem statement:  mom was about to hand write hundreds of addresses from this website, so I offered to build a webscrawler instead.
+
+
 
 ===============
 **Scrapely**
